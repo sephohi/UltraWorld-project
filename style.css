@@ -74,7 +74,6 @@ body { font-family: 'Noto Sans', sans-serif; }
 }
 
 #analysis > .container { max-width: 1440px; }
-.sequence-note { color: #666; margin: -0.5rem auto 2rem; line-height: 1.6; }
 .long-horizon-video { aspect-ratio: auto; height: auto; }
 .analysis-details { max-width: 960px; margin: 4rem auto 0; }
 #long-horizon { margin-top: 2.5rem; }
