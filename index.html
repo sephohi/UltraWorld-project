@@ -80,15 +80,6 @@
   <section class="experiment-section" id="real-scans" aria-labelledby="real-heading">
     <h3 id="real-heading" class="title is-4 has-text-centered experiment-heading">Zero-shot Transfer to Real Scans</h3>
     <div class="experiment-videos">
-    <section class="operation-group" aria-labelledby="real-revisit-heading">
-      <h4 id="real-revisit-heading" class="title is-5 has-text-centered">Revisit</h4>
-      <figure class="experiment-clip">
-        <div class="comparison-scroll" tabindex="0" role="region" aria-label="Breast phantom · Revisit comparison; scroll horizontally on small screens">
-          <video class="comparison-video real-comparison-video" width="2616" height="720" controls muted playsinline preload="none" poster="assets/posters/zeroshot-revisit-breast-phantom-014.webp" src="assets/videos/zeroshot-revisit-breast-phantom-014.mp4" aria-label="Zero-shot Breast phantom · Revisit: action, Wan2.1, UltraWorld, and ground truth">Your browser does not support video. <a href="assets/videos/zeroshot-revisit-breast-phantom-014.mp4">Download clip</a>.</video>
-        </div>
-        <figcaption class="has-text-centered">Breast phantom</figcaption>
-      </figure>
-    </section>
     <section class="operation-group" aria-labelledby="real-sweep-heading">
       <h4 id="real-sweep-heading" class="title is-5 has-text-centered">Sweep</h4>
       <figure class="experiment-clip">
@@ -120,6 +111,15 @@
           <video class="comparison-video real-comparison-video" width="2616" height="720" controls muted playsinline preload="none" poster="assets/posters/zeroshot-recorded-scan-limb-087.webp" src="assets/videos/zeroshot-recorded-scan-limb-087.mp4" aria-label="Zero-shot Limb · Sweep: action, Wan2.1, UltraWorld, and ground truth">Your browser does not support video. <a href="assets/videos/zeroshot-recorded-scan-limb-087.mp4">Download clip</a>.</video>
         </div>
         <figcaption class="has-text-centered">Limb</figcaption>
+      </figure>
+    </section>
+    <section class="operation-group" aria-labelledby="real-revisit-heading">
+      <h4 id="real-revisit-heading" class="title is-5 has-text-centered">Revisit</h4>
+      <figure class="experiment-clip">
+        <div class="comparison-scroll" tabindex="0" role="region" aria-label="Breast phantom · Revisit comparison; scroll horizontally on small screens">
+          <video class="comparison-video real-comparison-video" width="2616" height="720" controls muted playsinline preload="none" poster="assets/posters/zeroshot-revisit-breast-phantom-014.webp" src="assets/videos/zeroshot-revisit-breast-phantom-014.mp4" aria-label="Zero-shot Breast phantom · Revisit: action, Wan2.1, UltraWorld, and ground truth">Your browser does not support video. <a href="assets/videos/zeroshot-revisit-breast-phantom-014.mp4">Download clip</a>.</video>
+        </div>
+        <figcaption class="has-text-centered">Breast phantom</figcaption>
       </figure>
     </section>
     <section class="operation-group" aria-labelledby="real-slide-heading">
@@ -238,20 +238,6 @@
     </section>
     </div>
   </section>
-  <div class="analysis-details">
-
-  <h3 class="subtitle has-text-centered">Parameter comparison</h3>
-<figure class="paper-figure paper-table"><a href="assets/figures/table-4.png" target="_blank" rel="noopener" aria-label="Open full-resolution image: Appendix Table 4, action encoder architectures and parameter counts"><img src="assets/figures/table-4.png" alt="Appendix Table 4: action encoder architectures and parameter counts" loading="lazy"></a></figure>
-  <div class="result-block"><h3 class="subtitle has-text-centered">Generalization to real clinical ultrasound</h3>
-<figure class="paper-figure paper-table clinical-table"><a href="assets/figures/table-3.png" target="_blank" rel="noopener" aria-label="Open full-resolution image: Table 3, original paper screenshot: BUSI and BUV zero-action and round-trip consistency"><img src="assets/figures/table-3.png" alt="Table 3, original paper screenshot: BUSI and BUV zero-action and round-trip consistency" loading="lazy"></a></figure>
-  <p class="content has-text-justified">Unseen initial frames from patient-held-out BUV and independent BUSI evaluate zero-action stability and round-trip recovery consistency. These experiments do not use paired real future sequences.</p></div>
-  </div>
-</div></section>
-
-<section class="section" id="planning"><div class="container is-max-desktop">
-  <h2 class="title is-3 has-text-centered">Applications</h2>
-  <h3 class="subtitle has-text-centered">Robotic Ultrasound Planning</h3>
-<figure class="paper-figure "><a href="assets/figures/planning.webp" target="_blank" rel="noopener" aria-label="Open full-resolution image: Figure 8: Closed-loop robotic ultrasound planning"><img src="assets/figures/planning.webp" alt="Figure 8: Closed-loop robotic ultrasound planning" loading="lazy"></a><figcaption class="has-text-justified"><b>Closed-loop planning in simulation.</b> UltraWorld imagines candidate futures for model predictive control with the cross-entropy method. Only the first optimized action is executed before replanning from the new observation.</figcaption></figure>
 </div></section>
 
 </main>
