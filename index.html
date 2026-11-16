@@ -11,7 +11,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/vendor/bulma.min.css">
   <link rel="stylesheet" href="assets/vendor/astra.css">
-  <link rel="stylesheet" href="style.css?v=experiment-sections-1">
+  <link rel="stylesheet" href="style.css?v=long-horizon-1">
   <script src="app.js?v=experiment-sections-1" defer></script>
 </head>
 <body>
@@ -38,6 +38,7 @@
 
 <section class="section" id="demos"><div class="container is-max-desktop">
   <h2 class="title is-3 has-text-centered">Experiments</h2>
+  <p class="has-text-centered sequence-note">17-frame sequences</p>
   <nav class="experiment-nav" aria-label="Experiment sections">
     <a href="#synthetic-scans">Synthetic scans</a>
     <a href="#real-scans">Real scans</a>
@@ -104,11 +105,36 @@
 
 <section class="section" id="analysis"><div class="container is-max-desktop">
   <h2 class="title is-3 has-text-centered">Analysis</h2>
+  <section id="long-horizon" class="experiment-section" aria-labelledby="long-horizon-heading">
+    <h3 id="long-horizon-heading" class="title is-4 has-text-centered">Long-Horizon Prediction</h3>
+    <p class="has-text-centered sequence-note">49-frame sequences, compared with the 17-frame examples in Experiments.</p>
+    <div class="experiment-videos">
+      <section class="operation-group" aria-labelledby="long-synthetic-neck-sweep-heading">
+        <h4 id="long-synthetic-neck-sweep-heading" class="title is-5 has-text-centered">Synthetic scans · Neck sweep</h4>
+        <figure class="experiment-clip">
+          <div class="comparison-scroll" tabindex="0" role="region" aria-label="Synthetic scans · Neck sweep, 49-frame sequence; scroll horizontally on small screens">
+            <video class="comparison-video long-horizon-video" width="1960" height="720" controls muted playsinline preload="none" poster="assets/posters/long-synthetic-neck-sweep.webp" src="assets/videos/long-synthetic-neck-sweep.mp4" aria-label="Long-horizon prediction: Synthetic scans · Neck sweep, 49-frame sequence">Your browser does not support video. <a href="assets/videos/long-synthetic-neck-sweep.mp4">Download clip</a>.</video>
+          </div>
+        </figure>
+      </section>
+      <section class="operation-group" aria-labelledby="long-real-neck-slide-heading">
+        <h4 id="long-real-neck-slide-heading" class="title is-5 has-text-centered">Real scans · Neck slide</h4>
+        <figure class="experiment-clip">
+          <div class="comparison-scroll" tabindex="0" role="region" aria-label="Real scans · Neck slide, 49-frame sequence; scroll horizontally on small screens">
+            <video class="comparison-video long-horizon-video" width="3928" height="720" controls muted playsinline preload="none" poster="assets/posters/long-real-neck-slide.webp" src="assets/videos/long-real-neck-slide.mp4" aria-label="Long-horizon prediction: Real scans · Neck slide, 49-frame sequence">Your browser does not support video. <a href="assets/videos/long-real-neck-slide.mp4">Download clip</a>.</video>
+          </div>
+        </figure>
+      </section>
+    </div>
+  </section>
+  <div class="analysis-details">
+
   <h3 class="subtitle has-text-centered">Parameter comparison</h3>
 <figure class="paper-figure paper-table"><a href="assets/figures/table-4.png" target="_blank" rel="noopener" aria-label="Open full-resolution image: Appendix Table 4, action encoder architectures and parameter counts"><img src="assets/figures/table-4.png" alt="Appendix Table 4: action encoder architectures and parameter counts" loading="lazy"></a></figure>
   <div class="result-block"><h3 class="subtitle has-text-centered">Generalization to real clinical ultrasound</h3>
 <figure class="paper-figure paper-table clinical-table"><a href="assets/figures/table-3.png" target="_blank" rel="noopener" aria-label="Open full-resolution image: Table 3, original paper screenshot: BUSI and BUV zero-action and round-trip consistency"><img src="assets/figures/table-3.png" alt="Table 3, original paper screenshot: BUSI and BUV zero-action and round-trip consistency" loading="lazy"></a></figure>
   <p class="content has-text-justified">Unseen initial frames from patient-held-out BUV and independent BUSI evaluate zero-action stability and round-trip recovery consistency. These experiments do not use paired real future sequences.</p></div>
+  </div>
 </div></section>
 
 <section class="section" id="planning"><div class="container is-max-desktop">
