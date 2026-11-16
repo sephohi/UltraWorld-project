@@ -77,3 +77,5 @@ body { font-family: 'Noto Sans', sans-serif; }
 .long-horizon-video { aspect-ratio: auto; height: auto; }
 .analysis-details { max-width: 960px; margin: 4rem auto 0; }
 #long-horizon { margin-top: 2.5rem; }
+
+.comparison-video.native-aspect { aspect-ratio: auto; height: auto; }
