@@ -25,7 +25,7 @@
   document.querySelectorAll('.operation-group').forEach(group => {
     const slides = [...group.querySelectorAll('.experiment-clip')];
     if (slides.length < 2) return;
-    const label = group.querySelector('h3').textContent;
+    const label = group.querySelector('h3, h4').textContent;
     const stage = document.createElement('div');
     stage.className = 'case-carousel';
     stage.setAttribute('role', 'region');
