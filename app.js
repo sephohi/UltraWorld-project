@@ -127,4 +127,27 @@
   document.addEventListener('visibilitychange', () => {
     videos.forEach(video => document.hidden ? pause(video) : playIfVisible(video));
   });
+
+  // Native fragment scrolling can start before the carousels and fonts settle.
+  // Align once after initial layout, without pulling back a user who moved on.
+  const initialHash = window.location.hash;
+  if (initialHash) {
+    let userInteracted = false;
+    const cancelAlignment = () => { userInteracted = true; };
+    const interactionEvents = ['wheel', 'touchstart', 'pointerdown', 'keydown'];
+    interactionEvents.forEach(type => window.addEventListener(type, cancelAlignment, {passive: true}));
+    const pageLoaded = document.readyState === 'complete'
+      ? Promise.resolve()
+      : new Promise(resolve => window.addEventListener('load', resolve, {once: true}));
+    Promise.all([pageLoaded, document.fonts.ready]).then(() => {
+      requestAnimationFrame(() => {
+        interactionEvents.forEach(type => window.removeEventListener(type, cancelAlignment));
+        if (userInteracted || window.location.hash !== initialHash) return;
+        let targetId;
+        try { targetId = decodeURIComponent(initialHash.slice(1)); }
+        catch { return; }
+        document.getElementById(targetId)?.scrollIntoView({behavior: 'instant', block: 'start'});
+      });
+    });
+  }
 })();

@@ -14,7 +14,7 @@ body { font-family: 'Noto Sans', sans-serif; }
 .publication-links .icon svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .publication-links .resource-pending { opacity: 1; cursor: default; }
 .preview-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; }
-.preview-grid video { display: block; width: 100%; border: 1px solid #bbb; border-radius: 10px; }
+.preview-grid video { display: block; width: 100%; height: auto; border: 1px solid #bbb; border-radius: 10px; }
 .preview-grid figcaption { margin-top: .5rem; }
 .method-section { padding-top: 20px; }
 .paper-figure { margin: 0; }
@@ -73,6 +73,7 @@ body { font-family: 'Noto Sans', sans-serif; }
  .experiment-section + .experiment-section { margin-top: 3rem; padding-top: 2.5rem; }
 }
 
+#analysis { min-height: 100vh; }
 #analysis > .container { max-width: 1440px; }
 .long-horizon-video { aspect-ratio: auto; height: auto; }
 .analysis-details { max-width: 960px; margin: 4rem auto 0; }
