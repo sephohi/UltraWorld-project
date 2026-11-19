@@ -6,7 +6,7 @@
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="UltraWorld: Learning Interactive Ultrasound World Models from Untracked Clinical Videos with Acoustic Sampling Map.">
+  <meta name="description" content="UltraWorld: Learning Interactive Ultrasound World Models from Untracked Videos via Acoustic Sampling Map.">
   <title>UltraWorld | Interactive Ultrasound World Models</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/vendor/bulma.min.css">
@@ -19,7 +19,7 @@
 <main id="main">
 <section class="hero publication-header" id="top">
   <div class="hero-body"><div class="container is-max-desktop"><div class="columns is-centered"><div class="column has-text-centered">
-    <h1 class="title is-1 publication-title">UltraWorld: Learning Interactive Ultrasound World Models from Untracked Clinical Videos with Acoustic Sampling Map</h1>
+    <h1 class="title is-1 publication-title">UltraWorld: Learning Interactive Ultrasound World Models from Untracked Videos via Acoustic Sampling Map</h1>
     <div class="is-size-5 publication-authors">Anonymous Authors</div>
     <p class="publication-review">Anonymous submission to ICLR 2027</p>
   </div></div></div></div>
@@ -39,19 +39,10 @@
 <section class="section" id="demos"><div class="container is-max-desktop">
   <h2 class="title is-3 has-text-centered">Experiments</h2>
   <nav class="experiment-nav" aria-label="Experiment sections">
-    <a href="#quantitative-comparisons">Quantitative comparisons</a>
     <a href="#synthetic-scans">Synthetic scans</a>
     <a href="#real-scans">Real scans</a>
+    <a href="#quantitative-comparisons">Quantitative comparisons</a>
   </nav>
-  <section class="experiment-section" id="quantitative-comparisons" aria-labelledby="quantitative-heading">
-    <h3 id="quantitative-heading" class="title is-4 has-text-centered experiment-heading">Quantitative comparisons</h3>
-    <figure class="paper-figure paper-table">
-      <a href="assets/figures/table-1-v2.png" target="_blank" rel="noopener" aria-label="Open full-resolution Table 1: Comparison of action-conditioning representations across anatomical domains"><img src="assets/figures/table-1-v2.png" alt="Table 1: Prediction fidelity and action-following results for Fourier Enc., MLP Enc., PRoPE, and AsMap across breast, neck, and lower-limb ultrasound" loading="lazy" width="1665" height="935"></a>
-    </figure>
-    <figure class="paper-figure paper-table">
-      <a href="assets/figures/table-3-v2.png" target="_blank" rel="noopener" aria-label="Open full-resolution Table 3: Zero-shot transfer evaluation on real tracked ultrasound"><img src="assets/figures/table-3-v2.png" alt="Table 3: Zero-shot comparison of Wan2.1 and AsMap on breast phantom, neck, and lower-limb scans" loading="lazy" width="1665" height="521"></a>
-    </figure>
-  </section>
   <section class="experiment-section" id="synthetic-scans" aria-labelledby="synthetic-heading">
     <h3 id="synthetic-heading" class="title is-4 has-text-centered experiment-heading">Prediction on Synthetic Scans</h3>
 <div class="experiment-videos">
@@ -155,6 +146,15 @@
     </section>
     </div>
   </section>
+  <section class="experiment-section" id="quantitative-comparisons" aria-labelledby="quantitative-heading">
+    <h3 id="quantitative-heading" class="title is-4 has-text-centered experiment-heading">Quantitative comparisons</h3>
+    <figure class="paper-figure paper-table">
+      <a href="assets/figures/table-1-v2.png" target="_blank" rel="noopener" aria-label="Open full-resolution Table 1: Comparison of action-conditioning representations across anatomical domains"><img src="assets/figures/table-1-v2.png" alt="Table 1: Prediction fidelity and action-following results for Fourier Enc., MLP Enc., PRoPE, and AsMap across breast, neck, and lower-limb ultrasound" loading="lazy" width="1665" height="935"></a>
+    </figure>
+    <figure class="paper-figure paper-table">
+      <a href="assets/figures/table-3-v2.png" target="_blank" rel="noopener" aria-label="Open full-resolution Table 3: Zero-shot transfer evaluation on real tracked ultrasound"><img src="assets/figures/table-3-v2.png" alt="Table 3: Zero-shot comparison of Wan2.1 and AsMap on breast phantom, neck, and lower-limb scans" loading="lazy" width="1665" height="521"></a>
+    </figure>
+  </section>
 </div></section>
 
 <section class="section" id="analysis"><div class="container is-max-desktop">
@@ -248,19 +248,22 @@
     </section>
     </div>
   </section>
+  <figure class="paper-figure paper-table analysis-details" id="real-conditioning-table">
+    <a href="assets/figures/table-8-v2.png" target="_blank" rel="noopener" aria-label="Open full-resolution Table 8: Comparison of action-conditioning representations on real tracked ultrasound"><img src="assets/figures/table-8-v2.png" alt="Table 8: Prediction fidelity and action-following comparisons of Fourier Enc., MLP Enc., PRoPE, and AsMap on breast phantom, neck, and lower-limb ultrasound" loading="lazy" width="1665" height="898"></a>
+  </figure>
 </div></section>
 
 <section class="section" id="planning" aria-labelledby="applications-heading"><div class="container is-max-desktop">
   <h2 id="applications-heading" class="title is-3 has-text-centered">Applications</h2>
   <h3 class="title is-4 has-text-centered">Robotic Ultrasound Planning</h3>
-  <figure class="paper-figure planning-figure">
-    <a href="assets/figures/planning-v2.png" target="_blank" rel="noopener" aria-label="Open full-resolution Figure 8: Closed-loop ultrasound planning with UltraWorld"><img src="assets/figures/planning-v2.png" alt="Figure 8: Model rollouts, simulation observations, robot poses, and distance to the goal during closed-loop ultrasound planning" loading="lazy" width="1074" height="539"></a>
-  </figure>
   <figure class="paper-figure planning-example">
     <div class="comparison-scroll" tabindex="0" role="region" aria-label="Lower-limb planning comparison; scroll horizontally on small screens">
       <video class="planning-video" width="2304" height="440" controls muted playsinline preload="none" poster="assets/posters/planning-limb-02.webp" src="assets/videos/planning-limb-02.mp4" aria-label="Lower-limb planning: Goal, UltraWorld(Ours), Fourier Enc., Online Jacobian, MLP Enc., and PRoPE" aria-describedby="planning-video-caption">Your browser does not support video. <a href="assets/videos/planning-limb-02.mp4">Download the planning video</a>.</video>
     </div>
     <figcaption id="planning-video-caption" class="has-text-centered"><b>Goal-directed planning in lower-limb ultrasound.</b> Each second shows one executed command; stopped methods hold their final observation. The comparison uses recorded synthetic trajectories.</figcaption>
+  </figure>
+  <figure class="paper-figure planning-figure">
+    <a href="assets/figures/planning-v2.png" target="_blank" rel="noopener" aria-label="Open full-resolution Figure 8: Closed-loop ultrasound planning with UltraWorld"><img src="assets/figures/planning-v2.png" alt="Figure 8: Model rollouts, simulation observations, robot poses, and distance to the goal during closed-loop ultrasound planning" loading="lazy" width="1074" height="539"></a>
   </figure>
 </div></section>
 
