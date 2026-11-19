@@ -80,3 +80,10 @@ body { font-family: 'Noto Sans', sans-serif; }
 #long-horizon { margin-top: 2.5rem; }
 
 .comparison-video.native-aspect { aspect-ratio: auto; height: auto; }
+
+#quantitative-comparisons { max-width: 960px; margin-left: auto; margin-right: auto; }
+#quantitative-comparisons .paper-table + .paper-table { margin-top: 3rem; }
+#planning > .container { max-width: 1440px; }
+.planning-figure { max-width: 960px; margin: 2rem auto 0; }
+.planning-example { margin-top: 3rem; }
+.planning-video { display: block; width: 100%; min-width: 1152px; height: auto; }
